@@ -1,0 +1,6 @@
+module Pods_DTravelTourist {
+  umbrella header "Pods-DTravelTourist-umbrella.h"
+
+  export *
+  module * { export * }
+}
