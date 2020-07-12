@@ -2,14 +2,11 @@ import React, { Component } from "react";
 import { View, Text } from "react-native";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { EmptyView } from "../components";
 
 export class History extends Component {
   render() {
-    return (
-      <View>
-        <Text> prop </Text>
-      </View>
-    );
+    return <EmptyView title={"Empty"} />;
   }
 }
 

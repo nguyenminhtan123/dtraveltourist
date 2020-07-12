@@ -60,6 +60,15 @@ class Home extends Component {
   pushTest = () => {
     this.props.logout();
   };
+  pushCart = () => {
+    NavigationUtils.push({
+      screen: "Cart",
+      isBack: true,
+      isTopBarEnable: true,
+      noBorder: true,
+      leftButtonsColor: Colors.black,
+    });
+  };
 
   render() {
     const DATA = [
@@ -128,7 +137,7 @@ class Home extends Component {
               fontWeight: Fonts.fontWeight.bold,
             }}
           >
-            I am Planning for
+            Place in Da Nang
           </Text>
 
           <View
@@ -324,6 +333,24 @@ class Home extends Component {
             </View>
           </ScrollView>
         </View>
+
+        <TouchableWithoutFeedback onPress={this.pushCart}>
+          <View
+            style={{
+              backgroundColor: Colors.primary,
+              position: "absolute",
+              width: 56,
+              height: 56,
+              borderRadius: 40,
+              justifyContent: "center",
+              alignItems: "center",
+              bottom: 18,
+              right: 18,
+            }}
+          >
+            <Icons name={"shopping-cart"} color={Colors.white} size={24} />
+          </View>
+        </TouchableWithoutFeedback>
       </View>
     );
   }

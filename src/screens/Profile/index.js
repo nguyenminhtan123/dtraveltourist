@@ -9,9 +9,15 @@ import {
   ScrollView,
   FlatList,
   Dimensions,
+  ImageBackground,
 } from "react-native";
-
+import LoginActions from "../../redux/AuthRedux/actions";
 import colors from "../../themes/Colors";
+import { Container } from "../../components";
+import metrics from "../../themes/Metrics";
+import { Colors } from "../../themes";
+import Icon from "react-native-vector-icons/Ionicons";
+import { useSelector, useDispatch } from "react-redux";
 
 const { height, width } = Dimensions.get("window");
 
@@ -42,142 +48,88 @@ const DATA = [
   },
 ];
 
-export default class UserProfile extends Component {
-  static options = () => ({
-    topBar: {
-      elevation: 0,
-      noBorder: true,
-    },
-  });
+const Profile = () => {
+  const dispatch = useDispatch();
 
-  renderItem = ({ item }) => (
-    <View style={{ marginHorizontal: 5 }}>
+  const onLogout = async () => {
+    await dispatch(LoginActions.logout());
+  };
+  return (
+    <Container>
       <Image
-        source={require("../../assets/img/tourguide.jpg")}
-        style={{ width: 100, height: 100 }}
+        source={require("../../assets/img/userBackground.jpg")}
+        style={{
+          width: metrics.screenWidth,
+          height: metrics.screenHeight / 3,
+          backgroundColor: "pink",
+          position: "absolute",
+          opacity: 0.4,
+          borderWidth: 3,
+          borderColor: Colors.white,
+          borderBottomLeftRadius: 32,
+          borderBottomRightRadius: 32,
+        }}
       />
-      {/* <Text>{item.title}</Text> */}
-    </View>
-  );
-  render() {
-    return (
-      <View style={{ flex: 1, backgroundColor: "white", padding: 20 }}>
-        <View style={{ alignSelf: "center" }}>
-          <Image
-            source={require("../../assets/img/logo.jpg")}
-            style={{
-              borderRadius: 250,
-              width: 130,
-              height: 130,
-            }}
-          />
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              marginRight: 20,
-              marginTop: 5,
-            }}
-          >
-            <Text>Tan Nguyen</Text>
-            <View
-              style={{
-                width: StyleSheet.hairlineWidth,
-                backgroundColor: "black",
-                height: 25,
-                marginHorizontal: 10,
-              }}
-            />
-            <Text>20</Text>
-          </View>
-        </View>
-        <View style={{}}>
-          <View style={{ marginTop: 20 }}>
-            <Text style={{ fontSize: 16, color: "red" }}>
-              How much much do you want to pay for an hour ?
-            </Text>
-            <TextInput
-              style={{
-                borderBottomColor: colors.divider,
-                borderBottomWidth: 2,
-                height: 35,
-                // width: 350,
-              }}
-              placeholder="5$"
-            />
-          </View>
-          <View style={{ marginTop: 20 }}>
-            <Text style={{ fontSize: 16, color: "red" }}>
-              The trip minium duration for each tour is ?
-            </Text>
-            <TextInput
-              style={{
-                borderBottomColor: colors.divider,
-                borderBottomWidth: 2,
-                height: 35,
-                // width: 350,
-              }}
-              placeholder="2 hour"
-            />
-          </View>
-        </View>
-
-        <View style={{ marginTop: 20 }}>
-          <Text style={{ fontSize: 16, color: "red" }}>Activities</Text>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              marginTop: 10,
-            }}
-          >
-            <TouchableWithoutFeedback>
-              <View style={styles.activityButton}>
-                <Text style={styles.activityTitle}>Food</Text>
-              </View>
-            </TouchableWithoutFeedback>
-            <TouchableWithoutFeedback>
-              <View style={styles.activityButton}>
-                <Text style={styles.activityTitle}>Shopping</Text>
-              </View>
-            </TouchableWithoutFeedback>
-            <TouchableWithoutFeedback>
-              <View style={styles.activityButton}>
-                <Text style={styles.activityTitle}>Local</Text>
-              </View>
-            </TouchableWithoutFeedback>
-            <TouchableWithoutFeedback>
-              <View style={styles.activityButton}>
-                <Text style={styles.activityTitle}>Entertainment</Text>
-              </View>
-            </TouchableWithoutFeedback>
-          </View>
-        </View>
-        <View style={{ marginTop: 20 }}>
-          <Text style={{ fontWeight: "bold", fontSize: 15 }}>Tour history</Text>
-        </View>
-        <View
-          style={{
-            width: width,
-            height: 100,
-            // alignSelf: "center",
-            marginTop: 10,
-            marginLeft: -20,
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "flex-end",
+        }}
+      >
+        <TouchableWithoutFeedback
+          onPress={() => {
+            onLogout();
           }}
         >
-          <FlatList
-            horizontal
-            data={DATA}
-            renderItem={this.renderItem}
-            keyExtractor={(item) => item.id}
-            showsHorizontalScrollIndicator={false}
-          />
-        </View>
+          <View
+            style={{
+              width: 36,
+              height: 36,
+              backgroundColor: Colors.white,
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 20,
+              marginTop: 12,
+              marginRight: 12,
+              borderWidth: 1,
+              borderColor: "white",
+            }}
+          >
+            <Icon
+              name="ios-log-out"
+              size={24}
+              style={{ marginLeft: 4 }}
+              color={Colors.primary}
+            />
+          </View>
+        </TouchableWithoutFeedback>
       </View>
-    );
-  }
-}
+      <View
+        style={{
+          width: metrics.screenWidth,
+          height: metrics.screenHeight / 3,
+          alignItems: "center",
+          justifyContent: "flex-end",
+        }}
+      >
+        <Image
+          source={require("../../assets/img/user.png")}
+          style={{
+            width: 140,
+            height: 140,
+            borderRadius: 200,
+            borderWidth: 3,
+            borderColor: "white",
+            marginBottom: -12,
+          }}
+        />
+      </View>
+    </Container>
+  );
+};
+
+export default Profile;
+
 const styles = StyleSheet.create({
   activityButton: {
     backgroundColor: colors.primary,
