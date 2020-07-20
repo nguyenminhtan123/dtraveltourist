@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/Users/tan/Desktop/tan-github/dtraveltourist/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "/Users/tan/.gradle/caches/transforms-2/files-2.1/de3ffec6006ed8fbf1cafcfcce14d760/media-1.0.0/res/values-v24/values-v24.xml",

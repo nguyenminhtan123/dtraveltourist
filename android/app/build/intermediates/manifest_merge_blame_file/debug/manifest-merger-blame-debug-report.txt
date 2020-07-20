@@ -9,99 +9,99 @@
 9        android:targetSdkVersion="28" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/debug/AndroidManifest.xml:5:5-77
-11-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/debug/AndroidManifest.xml:5:22-75
+11-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/debug/AndroidManifest.xml:5:22-75
 12    <!-- 🚨 Keep only the permissions used in your app 🚨 -->
 13    <uses-permission android:name="android.permission.ACCEPT_HANDOVER" />
-13-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:5:3-72
-13-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:5:20-69
+13-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:5:3-72
+13-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:5:20-69
 14    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-14-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:6:3-83
-14-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:6:20-80
+14-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:6:3-83
+14-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:6:20-80
 15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-15-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:7:3-79
-15-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:7:20-76
+15-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:7:3-79
+15-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:7:20-76
 16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-16-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:8:3-77
-16-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:8:20-74
+16-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:8:3-77
+16-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:8:20-74
 17    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
-17-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:9:3-77
-17-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:9:20-74
+17-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:9:3-77
+17-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:9:20-74
 18    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS" />
-18-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:10:3-75
-18-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:10:20-72
+18-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:10:3-75
+18-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:10:20-72
 19    <uses-permission android:name="android.permission.BODY_SENSORS" />
-19-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:11:3-69
-19-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:11:20-66
+19-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:11:3-69
+19-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:11:20-66
 20    <uses-permission android:name="android.permission.CALL_PHONE" />
-20-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:12:3-67
-20-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:12:20-64
+20-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:12:3-67
+20-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:12:20-64
 21    <uses-permission android:name="android.permission.CAMERA" />
-21-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:13:3-63
-21-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:13:20-60
+21-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:13:3-63
+21-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:13:20-60
 22    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-22-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:14:3-69
-22-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:14:20-66
+22-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:14:3-69
+22-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:14:20-66
 23    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
-23-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:15:3-79
-23-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:15:20-76
+23-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:15:3-79
+23-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:15:20-76
 24    <uses-permission android:name="android.permission.READ_CALENDAR" />
-24-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:16:3-70
-24-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:16:20-67
+24-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:16:3-70
+24-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:16:20-67
 25    <uses-permission android:name="android.permission.READ_CALL_LOG" />
-25-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:17:3-70
-25-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:17:20-67
+25-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:17:3-70
+25-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:17:20-67
 26    <uses-permission android:name="android.permission.READ_CONTACTS" />
-26-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:18:3-70
-26-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:18:20-67
+26-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:18:3-70
+26-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:18:20-67
 27    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-27-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:19:3-78
-27-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:19:20-75
+27-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:19:3-78
+27-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:19:20-75
 28    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
-28-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:20:3-75
-28-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:20:20-72
+28-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:20:3-75
+28-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:20:20-72
 29    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-29-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:21:3-73
-29-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:21:20-70
+29-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:21:3-73
+29-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:21:20-70
 30    <uses-permission android:name="android.permission.READ_SMS" />
-30-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:22:3-65
-30-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:22:20-62
+30-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:22:3-65
+30-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:22:20-62
 31    <uses-permission android:name="android.permission.RECEIVE_MMS" />
-31-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:23:3-68
-31-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:23:20-65
+31-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:23:3-68
+31-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:23:20-65
 32    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-32-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:24:3-68
-32-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:24:20-65
+32-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:24:3-68
+32-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:24:20-65
 33    <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
-33-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:25:3-73
-33-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:25:20-70
+33-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:25:3-73
+33-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:25:20-70
 34    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-34-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:26:3-69
-34-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:26:20-66
+34-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:26:3-69
+34-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:26:20-66
 35    <uses-permission android:name="android.permission.SEND_SMS" />
-35-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:27:3-65
-35-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:27:20-62
+35-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:27:3-65
+35-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:27:20-62
 36    <uses-permission android:name="android.permission.USE_SIP" />
-36-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:28:3-64
-36-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:28:20-61
+36-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:28:3-64
+36-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:28:20-61
 37    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
-37-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:29:3-71
-37-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:29:20-68
+37-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:29:3-71
+37-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:29:20-68
 38    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
-38-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:30:3-71
-38-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:30:20-68
+38-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:30:3-71
+38-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:30:20-68
 39    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-39-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:31:3-71
-39-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:31:20-68
+39-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:31:3-71
+39-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:31:20-68
 40    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-40-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:32:3-79
-40-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:32:20-76
+40-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:32:3-79
+40-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:32:20-76
 41    <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL" /> <!-- … -->
-41-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:33:3-84
-41-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:33:20-81
+41-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:33:3-84
+41-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:33:20-81
 42    <uses-permission android:name="android.permission.INTERNET" />
-42-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:37:5-67
-42-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:37:22-64
+42-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:37:5-67
+42-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:37:22-64
 43    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
 43-->[com.facebook.flipper:flipper:0.33.1] /Users/tan/.gradle/caches/transforms-2/files-2.1/9a92e095c5c54ad2256901c6c79cb5bb/jetified-flipper-0.33.1/AndroidManifest.xml:16:5-76
 43-->[com.facebook.flipper:flipper:0.33.1] /Users/tan/.gradle/caches/transforms-2/files-2.1/9a92e095c5c54ad2256901c6c79cb5bb/jetified-flipper-0.33.1/AndroidManifest.xml:16:22-73
@@ -124,81 +124,81 @@
 51-->[com.android.installreferrer:installreferrer:1.1.2] /Users/tan/.gradle/caches/transforms-2/files-2.1/f427622c23d6d59e2899bab5391dca4f/installreferrer-1.1.2/AndroidManifest.xml:9:22-107
 52
 53    <application
-53-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:39:5-62:19
+53-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:39:5-62:19
 54        android:name="com.dtraveltourist.MainApplication"
-54-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:40:7-38
+54-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:40:7-38
 55        android:allowBackup="false"
-55-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:44:7-34
+55-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:44:7-34
 56        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 56-->[androidx.core:core:1.1.0] /Users/tan/.gradle/caches/transforms-2/files-2.1/b5e3eac8b7d95b677bd5a8692922c1dc/core-1.1.0/AndroidManifest.xml:24:18-86
 57        android:debuggable="true"
 58        android:icon="@mipmap/ic_launcher"
-58-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:42:7-41
+58-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:42:7-41
 59        android:label="@string/app_name"
-59-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:41:7-39
+59-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:41:7-39
 60        android:roundIcon="@mipmap/ic_launcher_round"
-60-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:43:7-52
+60-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:43:7-52
 61        android:theme="@style/AppTheme"
-61-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:45:7-38
+61-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:45:7-38
 62        android:usesCleartextTraffic="true" >
-62-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/debug/AndroidManifest.xml:7:18-53
+62-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/debug/AndroidManifest.xml:7:18-53
 63        <meta-data
-63-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:46:7-48:63
+63-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:46:7-48:63
 64            android:name="com.google.android.geo.API_KEY"
-64-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:47:6-51
+64-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:47:6-51
 65            android:value="AIzaSyAhHIG5xielecYHAOrRXw3hEux5ygV6ZNE" />
-65-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:48:6-61
+65-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:48:6-61
 66
 67        <uses-library
-67-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:49:6-84
+67-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:49:6-84
 68            android:name="org.apache.http.legacy"
-68-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:49:20-57
+68-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:49:20-57
 69            android:required="false" />
-69-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:49:58-82
+69-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:49:58-82
 70
 71        <activity
-71-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:50:7-60:18
+71-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:50:7-60:18
 72            android:name="com.dtraveltourist.MainActivity"
-72-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:51:9-37
+72-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:51:9-37
 73            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-73-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:53:9-86
+73-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:53:9-86
 74            android:label="@string/app_name"
-74-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:52:9-41
+74-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:52:9-41
 75            android:launchMode="singleTask"
-75-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:54:9-40
+75-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:54:9-40
 76            android:windowSoftInputMode="adjustResize" >
-76-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:55:9-51
+76-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:55:9-51
 77            <intent-filter>
-77-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:56:9-59:25
+77-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:56:9-59:25
 78                <action android:name="android.intent.action.MAIN" />
-78-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:57:13-65
-78-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:57:21-62
+78-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:57:13-65
+78-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:57:21-62
 79
 80                <category android:name="android.intent.category.LAUNCHER" />
-80-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:58:13-73
-80-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:58:23-70
+80-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:58:13-73
+80-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:58:23-70
 81            </intent-filter>
 82        </activity>
 83        <activity
-83-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:61:7-84
+83-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:61:7-84
 84            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-84-->/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/src/main/AndroidManifest.xml:61:17-81
+84-->/Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:61:17-81
 85            android:exported="false" />
-85-->[:react-native-navigation] /Users/tan/Desktop/tannguyen/d-travel-tourist/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:14:13-37
+85-->[:react-native-navigation] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:14:13-37
 86
 87        <receiver
-87-->[:react-native-device-info] /Users/tan/Desktop/tannguyen/d-travel-tourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-21:20
+87-->[:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:9-21:20
 88            android:name="com.learnium.RNDeviceInfo.RNDeviceReceiver"
-88-->[:react-native-device-info] /Users/tan/Desktop/tannguyen/d-travel-tourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-70
+88-->[:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-70
 89            android:enabled="true"
-89-->[:react-native-device-info] /Users/tan/Desktop/tannguyen/d-travel-tourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-35
+89-->[:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-35
 90            android:exported="true" >
-90-->[:react-native-device-info] /Users/tan/Desktop/tannguyen/d-travel-tourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-36
+90-->[:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-36
 91            <intent-filter>
-91-->[:react-native-device-info] /Users/tan/Desktop/tannguyen/d-travel-tourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-20:29
+91-->[:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:13-20:29
 92                <action android:name="com.android.vending.INSTALL_REFERRER" />
-92-->[:react-native-device-info] /Users/tan/Desktop/tannguyen/d-travel-tourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-79
-92-->[:react-native-device-info] /Users/tan/Desktop/tannguyen/d-travel-tourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:25-76
+92-->[:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-79
+92-->[:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:25-76
 93            </intent-filter>
 94        </receiver>
 95

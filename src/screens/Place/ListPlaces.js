@@ -16,6 +16,10 @@ import Icons from "react-native-vector-icons/FontAwesome";
 import { NavigationUtils } from "../../navigation";
 
 export class ListPlaces extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   pushPlaceDetail = () => {
     NavigationUtils.push({
       screen: "PlaceDetail",
@@ -25,30 +29,83 @@ export class ListPlaces extends Component {
       leftButtonsColor: Colors.white,
     });
   };
-  render() {
-    const SITE = [
-      {
-        id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-        name: "Hoi An",
-        image: require("../../assets/img/site3.jpg"),
-      },
-      {
-        id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-        name: "My Khe Beach",
-        image: require("../../assets/img/site2.jpg"),
-      },
-      {
-        id: "58694a0f-3da1-471f-bd96-145571e29d72",
-        name: "Linh Ung Pagoda",
-        image: require("../../assets/img/site1.jpg"),
-      },
-      {
-        id: "58694a0f-3da1-471f-bd96-145571e2972",
-        name: "Beer",
-        image: require("../../assets/img/site3.jpg"),
-      },
-    ];
+  renderItem = ({ item }) => {
+    return (
+      <TouchableWithoutFeedback onPress={this.pushPlaceDetail}>
+        <View
+          style={{
+            width: "100%",
+            height: 190,
+            borderRadius: 30,
+            marginVertical: 10,
+            elevation: 10,
+            shadowColor: "black",
+            shadowOffset: { width: 3, height: 4 },
+            shadowOpacity: 0.3,
+            shadowRadius: 4,
+          }}
+        >
+          <ImageBackground
+            source={{ uri: item.image }}
+            style={{ flex: 1 }}
+            imageStyle={{ borderRadius: 30 }}
+          >
+            <View
+              style={{
+                flex: 1,
+                justifyContent: "flex-end",
+                paddingHorizontal: 30,
+                paddingVertical: 8,
+              }}
+            >
+              <Text
+                style={{
+                  fontWeight: "bold",
+                  fontSize: 20,
+                  color: Colors.white,
+                }}
+              >
+                {item.name}
+              </Text>
 
+              {/* <Text
+                style={{
+                  fontWeight: Fonts.fontWeight.bold,
+                  fontSize: Fonts.fontSize.large,
+                  color: Colors.white,
+                }}
+              >
+                Best place
+              </Text> */}
+              <View
+                style={{
+                  flexDirection: "row",
+                  marginTop: 4,
+                }}
+              >
+                <View style={styles.starContainer}>
+                  <Icons name="star" size={13} color={Colors.white} />
+                </View>
+                <View style={styles.starContainer}>
+                  <Icons name="star" size={13} color={Colors.white} />
+                </View>
+                <View style={styles.starContainer}>
+                  <Icons name="star" size={13} color={Colors.white} />
+                </View>
+                <View style={styles.starContainer}>
+                  <Icons name="star" size={13} color={Colors.white} />
+                </View>
+                <View style={styles.starContainer}>
+                  <Icons name="star" size={13} color={Colors.white} />
+                </View>
+              </View>
+            </View>
+          </ImageBackground>
+        </View>
+      </TouchableWithoutFeedback>
+    );
+  };
+  render() {
     return (
       <View style={{ flex: 1, marginHorizontal: 20 }}>
         <View
@@ -73,81 +130,8 @@ export class ListPlaces extends Component {
               paddingVertical: 15,
               paddingBottom: 100,
             }}
-            data={SITE}
-            renderItem={({ item }) => (
-              <TouchableWithoutFeedback onPress={this.pushPlaceDetail}>
-                <View
-                  style={{
-                    width: "100%",
-                    height: 190,
-                    borderRadius: 30,
-                    marginVertical: 10,
-                    elevation: 10,
-                    shadowColor: "black",
-                    shadowOffset: { width: 3, height: 4 },
-                    shadowOpacity: 0.3,
-                    shadowRadius: 4,
-                  }}
-                >
-                  <ImageBackground
-                    source={item.image}
-                    style={{ flex: 1 }}
-                    imageStyle={{ borderRadius: 30 }}
-                  >
-                    <View
-                      style={{
-                        flex: 1,
-                        justifyContent: "flex-end",
-                        paddingHorizontal: 30,
-                        paddingVertical: 25,
-                      }}
-                    >
-                      <Text
-                        style={{
-                          fontWeight: "bold",
-                          fontSize: Fonts.fontSize.title,
-                          color: Colors.white,
-                        }}
-                      >
-                        {item.name}
-                      </Text>
-
-                      <Text
-                        style={{
-                          fontWeight: Fonts.fontWeight.bold,
-                          fontSize: Fonts.fontSize.large,
-                          color: Colors.white,
-                        }}
-                      >
-                        Best place
-                      </Text>
-                      <View
-                        style={{
-                          flexDirection: "row",
-                          marginTop: 10,
-                        }}
-                      >
-                        <View style={styles.starContainer}>
-                          <Icons name="star" size={13} color={Colors.white} />
-                        </View>
-                        <View style={styles.starContainer}>
-                          <Icons name="star" size={13} color={Colors.white} />
-                        </View>
-                        <View style={styles.starContainer}>
-                          <Icons name="star" size={13} color={Colors.white} />
-                        </View>
-                        <View style={styles.starContainer}>
-                          <Icons name="star" size={13} color={Colors.white} />
-                        </View>
-                        <View style={styles.starContainer}>
-                          <Icons name="star" size={13} color={Colors.white} />
-                        </View>
-                      </View>
-                    </View>
-                  </ImageBackground>
-                </View>
-              </TouchableWithoutFeedback>
-            )}
+            data={this.props.categorySites}
+            renderItem={this.renderItem}
             keyExtractor={(item) => item.id}
           />
         </View>

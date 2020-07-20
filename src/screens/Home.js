@@ -4,10 +4,12 @@ import {
   View,
   TouchableWithoutFeedback,
   TextInput,
-  ScrollView,
   Image,
   FlatList,
   StyleSheet,
+  KeyboardAvoidingView,
+  Keyboard,
+  ScrollView,
 } from "react-native";
 import { Navigation } from "react-native-navigation";
 import Icon from "react-native-vector-icons/Ionicons";
@@ -18,8 +20,26 @@ import { fontWeight } from "../themes/Fonts";
 import Icons from "react-native-vector-icons/FontAwesome";
 import { NavigationUtils } from "../navigation";
 import { iconsMap } from "../utils/appIcons";
+import SiteActions from "../redux/SiteRedux/actions";
+import { Container } from "../components";
+import AsyncStorage from "@react-native-community/async-storage";
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.props.getAllSite();
+    this.state = {
+      CATEGORY_ICON: {
+        Entertainment: "ios-star-outline",
+        Drink: "ios-beer",
+        Supermarket: "ios-pizza",
+        Attraction: "ios-boat",
+        Motel: "ios-boat",
+        Others: "ios-boat",
+      },
+    };
+  }
+
   static options = () => ({
     topBar: {
       noBorder: true,
@@ -37,7 +57,8 @@ class Home extends Component {
       elevation: 0,
     },
   });
-  pushListSites = () => {
+
+  pushListSites(item) {
     NavigationUtils.push({
       screen: "ListPlaces",
       isBack: true,
@@ -46,8 +67,11 @@ class Home extends Component {
       leftButtonsColor: Colors.black,
       rightButtons: true,
       rightButtonsColor: Colors.black,
+      passProps: {
+        categorySites: item.tourist_sites,
+      },
     });
-  };
+  }
   pushPlaceDetail = () => {
     NavigationUtils.push({
       screen: "PlaceDetail",
@@ -69,34 +93,50 @@ class Home extends Component {
       leftButtonsColor: Colors.black,
     });
   };
+  renderCategoryItem = ({ item }) => {
+    let categoryArray = item.category.trim().split(" ");
+    let IconName = categoryArray[categoryArray.length - 1];
+    return (
+      <TouchableWithoutFeedback onPress={() => this.pushListSites(item)}>
+        <View
+          style={{
+            backgroundColor: "#51cb96",
+            width: 100,
+            height: 110,
+            marginRight: 20,
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 15,
+          }}
+        >
+          <Icon
+            name={this.state.CATEGORY_ICON[IconName]}
+            size={55}
+            color={Colors.white}
+            style={{ marginHorizontal: 25, marginVertical: 3 }}
+          />
+          <Text
+            style={{ color: "white", alignSelf: "center", textAlign: "center" }}
+          >
+            {item.category}
+          </Text>
+        </View>
+      </TouchableWithoutFeedback>
+    );
+  };
 
   render() {
-    const DATA = [
-      {
-        id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-        category: "Cruise",
-        color: "#a4f4ff",
-        icon: "ios-boat",
-      },
-      {
-        id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-        category: "Plane",
-        color: "#fce3a2",
-        icon: "ios-airplane",
-      },
-      {
-        id: "58694a0f-3da1-471f-bd96-145571e29d72",
-        category: "Train",
-        color: "#baff8a",
-        icon: "ios-train",
-      },
-      {
-        id: "58694a0f-3da1-471f-bd96-145571e2972",
-        category: "Beer",
-        color: "#fbc7dc",
-        icon: "ios-beer",
-      },
-    ];
+    const { sitesData, getAllSiteLoading } = this.props;
+
+    const DATA = sitesData.map((item) => {
+      let category = {
+        id: item.id,
+        category: item.name,
+        tourist_sites: item.tourist_sites,
+      };
+      return category;
+    });
+
     const SITE = [
       {
         id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
@@ -120,245 +160,230 @@ class Home extends Component {
       },
     ];
     return (
-      <View style={{ flex: 1 }}>
-        <View
-          style={{
-            backgroundColor: Colors.primary,
-            flex: 1,
-            paddingHorizontal: 20,
-            borderBottomEndRadius: 20,
-            borderBottomStartRadius: 20,
-          }}
-        >
-          <Text
-            style={{
-              fontSize: Fonts.fontSize.title,
-              color: Colors.white,
-              fontWeight: Fonts.fontWeight.bold,
-            }}
-          >
-            Place in Da Nang
-          </Text>
-
+      <Container loading={getAllSiteLoading}>
+        <View style={{ flex: 1 }}>
           <View
             style={{
-              flexDirection: "row",
-              backgroundColor: "white",
-              height: 50,
-              borderRadius: 25,
-              marginVertical: 10,
+              backgroundColor: Colors.primary,
+              paddingHorizontal: 20,
+              borderBottomEndRadius: 20,
+              borderBottomStartRadius: 20,
             }}
           >
-            <View style={{ justifyContent: "center", flex: 1 }}>
-              <TextInput
-                ref={(ref) => (this.emailRef = ref)}
-                placeholder="Eg. Dragon Bridge, Linh Ung Pagoda"
-                onChangeText={this.getEmail}
-                style={{ paddingLeft: 20 }}
-              />
-            </View>
-            <TouchableWithoutFeedback>
-              <View style={{ justifyContent: "center" }}>
-                <Icons
-                  name="search"
-                  size={25}
-                  color={Colors.divider}
-                  style={{ marginHorizontal: 25 }}
-                />
-              </View>
-            </TouchableWithoutFeedback>
-          </View>
-        </View>
+            <Text
+              style={{
+                fontSize: Fonts.fontSize.title,
+                color: Colors.white,
+                fontWeight: Fonts.fontWeight.bold,
+              }}
+            >
+              Place in Da Nang
+            </Text>
 
-        <View style={{ flex: 4, marginLeft: 15, marginTop: 10 }}>
-          <ScrollView showsVerticalScrollIndicator={false}>
-            <View>
-              <Text
-                style={{
-                  fontSize: Fonts.fontSize.xMedium,
-                  fontWeight: Fonts.fontWeight.bold,
-                }}
-              >
-                CHOOSE BY CATEGORIES
-              </Text>
-              <View style={{ marginTop: 15 }}>
-                <FlatList
-                  horizontal
-                  showsHorizontalScrollIndicator={false}
-                  data={DATA}
-                  renderItem={({ item }) => (
-                    <View
-                      style={{
-                        backgroundColor: item.color,
-                        width: 100,
-                        height: 95,
-                        marginRight: 20,
-                        alignItems: "center",
-                        justifyContent: "center",
-                        borderRadius: 15,
-                      }}
-                    >
-                      <Icon
-                        name={item.icon}
-                        size={55}
-                        color={Colors.white}
-                        style={{ marginHorizontal: 25, marginVertical: 3 }}
-                      />
-                      <Text style={{ color: "#888888" }}>{item.category}</Text>
-                    </View>
-                  )}
-                  keyExtractor={(item) => item.id}
+            <View
+              style={{
+                flexDirection: "row",
+                backgroundColor: "white",
+                height: 50,
+                borderRadius: 25,
+                marginVertical: 10,
+              }}
+            >
+              <View style={{ justifyContent: "center", flex: 1 }}>
+                <TextInput
+                  ref={(ref) => (this.emailRef = ref)}
+                  placeholder="Eg. Dragon Bridge, Linh Ung Pagoda"
+                  onChangeText={this.getEmail}
+                  style={{ paddingLeft: 20 }}
                 />
               </View>
+              <TouchableWithoutFeedback>
+                <View style={{ justifyContent: "center" }}>
+                  <Icons
+                    name="search"
+                    size={25}
+                    color={Colors.divider}
+                    style={{ marginHorizontal: 25 }}
+                  />
+                </View>
+              </TouchableWithoutFeedback>
             </View>
-            <View style={{ marginTop: 30 }}>
-              <View
-                style={{
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                }}
-              >
+          </View>
+
+          <View style={{ marginLeft: 15, marginTop: 10 }}>
+            <ScrollView showsVerticalScrollIndicator={false}>
+              <View>
                 <Text
                   style={{
                     fontSize: Fonts.fontSize.xMedium,
                     fontWeight: Fonts.fontWeight.bold,
                   }}
                 >
-                  MOST POPULAR
+                  CHOOSE BY CATEGORIES
                 </Text>
-                <TouchableWithoutFeedback onPress={this.pushListSites}>
-                  <View style={{ marginRight: 10 }}>
-                    <Text
-                      style={{
-                        fontSize: Fonts.fontSize.xMedium,
-                        fontWeight: Fonts.fontWeight.bold,
-                        color: Colors.primary,
-                      }}
-                    >
-                      See more
-                    </Text>
-                  </View>
-                </TouchableWithoutFeedback>
+                <View style={{ marginTop: 15 }}>
+                  <FlatList
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    data={DATA}
+                    renderItem={this.renderCategoryItem}
+                    keyExtractor={(item) => item.id}
+                  />
+                </View>
               </View>
-              <View
-                style={{
-                  height: 260,
-                  marginBottom: 20,
-                  paddingBottom: 15,
-                }}
-              >
-                <FlatList
-                  horizontal
-                  showsHorizontalScrollIndicator={false}
-                  contentContainerStyle={{
-                    paddingVertical: 15,
+              <View style={{ marginTop: 30 }}>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    justifyContent: "space-between",
                   }}
-                  data={SITE}
-                  renderItem={({ item }) => (
-                    <TouchableWithoutFeedback onPress={this.pushPlaceDetail}>
-                      <View
+                >
+                  <Text
+                    style={{
+                      fontSize: Fonts.fontSize.xMedium,
+                      fontWeight: Fonts.fontWeight.bold,
+                    }}
+                  >
+                    MOST POPULAR
+                  </Text>
+                  <TouchableWithoutFeedback onPress={this.pushListSites}>
+                    <View style={{ marginRight: 10 }}>
+                      <Text
                         style={{
-                          alignItems: "center",
-                          marginRight: 15,
-                          flex: 1,
-                          borderRadius: 9,
-                          shadowOffset: { width: 3, height: 4 },
-                          shadowColor: "black",
-                          backgroundColor: "white",
-                          shadowOpacity: 0.3,
-                          elevation: 10,
+                          fontSize: Fonts.fontSize.xMedium,
+                          fontWeight: Fonts.fontWeight.bold,
+                          color: Colors.primary,
                         }}
                       >
+                        See more
+                      </Text>
+                    </View>
+                  </TouchableWithoutFeedback>
+                </View>
+                <View
+                  style={{
+                    height: 260,
+                    marginBottom: 20,
+                    paddingBottom: 15,
+                  }}
+                >
+                  <FlatList
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    contentContainerStyle={{
+                      paddingVertical: 15,
+                    }}
+                    data={SITE}
+                    renderItem={({ item }) => (
+                      <TouchableWithoutFeedback onPress={this.pushPlaceDetail}>
                         <View
                           style={{
-                            overflow: "hidden",
-                            borderRadius: 15,
-                            flex: 3,
-                            paddingHorizontal: 4,
-                          }}
-                        >
-                          <Image
-                            source={item.image}
-                            style={{
-                              width: 140,
-                              height: 200,
-                              resizeMode: "cover",
-                              overflow: "hidden",
-                              marginTop: -15,
-                            }}
-                          />
-                        </View>
-                        <View
-                          style={{
-                            flexDirection: "row",
-                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginRight: 15,
                             flex: 1,
-                            width: "100%",
+                            borderRadius: 9,
+                            shadowOffset: { width: 3, height: 4 },
+                            shadowColor: "black",
+                            backgroundColor: "white",
+                            shadowOpacity: 0.3,
+                            elevation: 10,
                           }}
                         >
-                          <Text
-                            style={{
-                              fontWeight: Fonts.fontWeight.medium,
-                              marginLeft: 5,
-                              marginTop: 10,
-                            }}
-                          >
-                            {item.name}
-                          </Text>
                           <View
                             style={{
-                              width: 25,
-                              height: 25,
-                              backgroundColor: "#f77776",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              borderRadius: 20,
-                              marginRight: 15,
-                              marginTop: -10,
+                              overflow: "hidden",
+                              borderRadius: 15,
+                              flex: 3,
+                              paddingHorizontal: 4,
                             }}
                           >
-                            <Icon
-                              name="ios-heart"
-                              size={15}
-                              color={Colors.white}
+                            <Image
+                              source={item.image}
+                              style={{
+                                width: 140,
+                                height: 200,
+                                resizeMode: "cover",
+                                overflow: "hidden",
+                                marginTop: -15,
+                              }}
                             />
                           </View>
+                          <View
+                            style={{
+                              flexDirection: "row",
+                              justifyContent: "space-between",
+                              flex: 1,
+                              width: "100%",
+                            }}
+                          >
+                            <Text
+                              style={{
+                                fontWeight: Fonts.fontWeight.medium,
+                                marginLeft: 5,
+                                marginTop: 10,
+                              }}
+                            >
+                              {item.name}
+                            </Text>
+                            <View
+                              style={{
+                                width: 25,
+                                height: 25,
+                                backgroundColor: "#f77776",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                borderRadius: 20,
+                                marginRight: 15,
+                                marginTop: -10,
+                              }}
+                            >
+                              <Icon
+                                name="ios-heart"
+                                size={15}
+                                color={Colors.white}
+                              />
+                            </View>
+                          </View>
                         </View>
-                      </View>
-                    </TouchableWithoutFeedback>
-                  )}
-                  keyExtractor={(item) => item.id}
-                />
+                      </TouchableWithoutFeedback>
+                    )}
+                    keyExtractor={(item) => item.id}
+                  />
+                </View>
               </View>
-            </View>
-          </ScrollView>
-        </View>
-
-        <TouchableWithoutFeedback onPress={this.pushCart}>
-          <View
-            style={{
-              backgroundColor: Colors.primary,
-              position: "absolute",
-              width: 56,
-              height: 56,
-              borderRadius: 40,
-              justifyContent: "center",
-              alignItems: "center",
-              bottom: 18,
-              right: 18,
-            }}
-          >
-            <Icons name={"shopping-cart"} color={Colors.white} size={24} />
+            </ScrollView>
           </View>
-        </TouchableWithoutFeedback>
-      </View>
+
+          <TouchableWithoutFeedback onPress={this.pushCart}>
+            <View
+              style={{
+                backgroundColor: Colors.primary,
+                position: "absolute",
+                width: 56,
+                height: 56,
+                borderRadius: 40,
+                justifyContent: "center",
+                alignItems: "center",
+                bottom: 18,
+                right: 18,
+              }}
+            >
+              <Icons name={"shopping-cart"} color={Colors.white} size={24} />
+            </View>
+          </TouchableWithoutFeedback>
+        </View>
+      </Container>
     );
   }
 }
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state, props) => ({
+  getAllSiteLoading: state.site.getAllSiteLoading,
+  sitesData: state.site.sites,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(LoginActions.logout()),
+  getAllSite: () => dispatch(SiteActions.getAllSite()),
 });
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
 const styles = StyleSheet.create({

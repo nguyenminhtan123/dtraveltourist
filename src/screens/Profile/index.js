@@ -21,33 +21,6 @@ import { useSelector, useDispatch } from "react-redux";
 
 const { height, width } = Dimensions.get("window");
 
-const DATA = [
-  {
-    id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-    title: "First Item",
-  },
-  {
-    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    title: "Second Item",
-  },
-  {
-    id: "58694a0f-3da1-471f-bd96-145571e29d72",
-    title: "Third Item",
-  },
-  {
-    id: "bd7acbea-c1b1-46c2-aesd5-3ad53abb28ba",
-    title: "First Item",
-  },
-  {
-    id: "3ac68afc-c605-4s8d3-a4f8-fbd91aa97f63",
-    title: "Second Item",
-  },
-  {
-    id: "58694a0f-3da1s-471f-bd96-145571e29d72",
-    title: "Third Item",
-  },
-];
-
 const Profile = () => {
   const dispatch = useDispatch();
 
@@ -60,12 +33,10 @@ const Profile = () => {
         source={require("../../assets/img/userBackground.jpg")}
         style={{
           width: metrics.screenWidth,
-          height: metrics.screenHeight / 3,
-          backgroundColor: "pink",
+          height: metrics.screenHeight / 3 - 24,
+          backgroundColor: "white",
           position: "absolute",
           opacity: 0.4,
-          borderWidth: 3,
-          borderColor: Colors.white,
           borderBottomLeftRadius: 32,
           borderBottomRightRadius: 32,
         }}
@@ -107,7 +78,7 @@ const Profile = () => {
       <View
         style={{
           width: metrics.screenWidth,
-          height: metrics.screenHeight / 3,
+          height: metrics.screenHeight / 3 - 24,
           alignItems: "center",
           justifyContent: "flex-end",
         }}
@@ -115,13 +86,18 @@ const Profile = () => {
         <Image
           source={require("../../assets/img/user.png")}
           style={{
-            width: 140,
-            height: 140,
+            width: 120,
+            height: 120,
             borderRadius: 200,
             borderWidth: 3,
             borderColor: "white",
-            marginBottom: -12,
           }}
+        />
+      </View>
+      <View>
+        <Text>Name</Text>
+        <TextInput
+          style={{ backgroundColor: "pink", width: 100, height: 50 }}
         />
       </View>
     </Container>

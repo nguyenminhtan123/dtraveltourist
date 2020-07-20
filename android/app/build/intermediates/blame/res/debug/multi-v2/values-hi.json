@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/tan/Desktop/tannguyen/d-travel-tourist/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml",
+            "outputFile": "/Users/tan/Desktop/tan-github/dtraveltourist/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml",
             "map": [
                 {
                     "source": "/Users/tan/.gradle/caches/transforms-2/files-2.1/126004e503112b64ecbdc0a4eea9d10e/jetified-play-services-basement-17.0.0/res/values-hi/values.xml",

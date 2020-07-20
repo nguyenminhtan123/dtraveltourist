@@ -97,9 +97,8 @@ function requestWrapper(method) {
         "Content-Type": "application/json; charset=UTF-8",
       },
     };
-
     if (global.token) {
-      defaults.headers.Authorization = `${global.token}`;
+      defaults.headers.Authorization = `Bearer ${global.token}`;
     }
 
     if (data) {
