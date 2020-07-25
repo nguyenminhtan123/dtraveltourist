@@ -31,6 +31,8 @@ import com.airbnb.android.react.maps.MapsPackage;
 import com.reactnativenavigation.react.NavigationPackage;
 // react-native-permissions
 import com.reactnativecommunity.rnpermissions.RNPermissionsPackage;
+// react-native-svg
+import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -88,6 +90,7 @@ public class PackageList {
       new MapsPackage(),
       new NavigationPackage(reactNativeHost),
       new RNPermissionsPackage(),
+      new SvgPackage(),
       new VectorIconsPackage()
     ));
   }

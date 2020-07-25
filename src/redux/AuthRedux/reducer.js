@@ -9,6 +9,7 @@ export const INITIAL_STATE = Immutable({
   token: null,
   loginLoading: false,
   registerLoading: false,
+  user: {},
 });
 
 const login = (state, { data }) =>
@@ -45,8 +46,13 @@ const registerSuccess = (state, { response }) =>
 
 const registerFail = (state, { error }) =>
   state.merge({
-    error: error,
+    error: error.error,
     registerLoading: false,
+  });
+
+const getUserSuccess = (state, { response }) =>
+  state.merge({
+    user: response,
   });
 
 const ACTION_HANDLERS = {
@@ -58,6 +64,8 @@ const ACTION_HANDLERS = {
   [AuthTypes.REGISTER]: register,
   [AuthTypes.REGISTER_SUCCESS]: registerSuccess,
   [AuthTypes.REGISTER_FAIL]: registerFail,
+
+  [AuthTypes.GET_USER_SUCCESS]: getUserSuccess,
 };
 
 export default makeReducerCreator(INITIAL_STATE, ACTION_HANDLERS);

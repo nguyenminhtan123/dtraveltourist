@@ -19,6 +19,7 @@ MERGED from [:react-native-gesture-handler] /Users/tan/Desktop/tan-github/dtrave
 MERGED from [:react-native-maps] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-navigation] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:react-native-permissions] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-svg] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.62.2] /Users/tan/.gradle/caches/transforms-2/files-2.1/bafbca20d738e387e7114008fe73876f/jetified-react-native-0.62.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.wix-playground:reflow-animator:1.0.6] /Users/tan/.gradle/caches/transforms-2/files-2.1/38e99c79ef56f8c33eaa050abe489800/reflow-animator-1.0.6/AndroidManifest.xml:2:1-11:12
@@ -381,6 +382,8 @@ MERGED from [:react-native-navigation] /Users/tan/Desktop/tan-github/dtraveltour
 MERGED from [:react-native-navigation] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-permissions] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-permissions] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-permissions/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-svg/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.62.2] /Users/tan/.gradle/caches/transforms-2/files-2.1/bafbca20d738e387e7114008fe73876f/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41

@@ -1,6 +1,10 @@
 const colors = {
   //main color
   primary: "#51cb96",
+  neutralDarkBlack: "#232929",
+  neutralDarkBlack80: "#4F5454",
+  neutralBlack: "#2F2E41",
+  neutralGrey: "#919495",
 
   // most use
   white: "#ffffff",

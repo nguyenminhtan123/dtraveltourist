@@ -72,13 +72,18 @@ class Home extends Component {
       },
     });
   }
-  pushPlaceDetail = () => {
+  pushPlaceDetail = (item) => {
+    console.log(item);
+
     NavigationUtils.push({
       screen: "PlaceDetail",
       isBack: true,
       isTopBarEnable: true,
       noBorder: true,
       leftButtonsColor: Colors.white,
+      passProps: {
+        siteId: item,
+      },
     });
   };
   pushTest = () => {
@@ -120,6 +125,78 @@ class Home extends Component {
           >
             {item.category}
           </Text>
+        </View>
+      </TouchableWithoutFeedback>
+    );
+  };
+
+  renderPopularSiteItem = ({ item }) => {
+    return (
+      <TouchableWithoutFeedback onPress={() => this.pushPlaceDetail(item)}>
+        <View
+          style={{
+            alignItems: "center",
+            marginRight: 15,
+            flex: 1,
+            borderRadius: 9,
+            shadowOffset: { width: 3, height: 4 },
+            shadowColor: "black",
+            backgroundColor: "white",
+            shadowOpacity: 0.3,
+            elevation: 10,
+          }}
+        >
+          <View
+            style={{
+              overflow: "hidden",
+              borderRadius: 15,
+              flex: 3,
+              paddingHorizontal: 4,
+            }}
+          >
+            <Image
+              source={item.image}
+              style={{
+                width: 140,
+                height: 200,
+                resizeMode: "cover",
+                overflow: "hidden",
+                marginTop: -15,
+              }}
+            />
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              flex: 1,
+              width: "100%",
+            }}
+          >
+            <Text
+              style={{
+                fontWeight: Fonts.fontWeight.medium,
+                marginLeft: 5,
+                marginTop: 10,
+              }}
+            >
+              {item.name}
+            </Text>
+            <View
+              style={{
+                width: 25,
+                height: 25,
+                backgroundColor: "#f77776",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 20,
+                marginRight: 15,
+                marginTop: -10,
+              }}
+            >
+              <Icon name="ios-heart" size={15} color={Colors.white} />
+            </View>
+          </View>
         </View>
       </TouchableWithoutFeedback>
     );
@@ -227,7 +304,7 @@ class Home extends Component {
                     showsHorizontalScrollIndicator={false}
                     data={DATA}
                     renderItem={this.renderCategoryItem}
-                    keyExtractor={(item) => item.id}
+                    keyExtractor={(item) => item.name}
                   />
                 </View>
               </View>
@@ -274,80 +351,8 @@ class Home extends Component {
                       paddingVertical: 15,
                     }}
                     data={SITE}
-                    renderItem={({ item }) => (
-                      <TouchableWithoutFeedback onPress={this.pushPlaceDetail}>
-                        <View
-                          style={{
-                            alignItems: "center",
-                            marginRight: 15,
-                            flex: 1,
-                            borderRadius: 9,
-                            shadowOffset: { width: 3, height: 4 },
-                            shadowColor: "black",
-                            backgroundColor: "white",
-                            shadowOpacity: 0.3,
-                            elevation: 10,
-                          }}
-                        >
-                          <View
-                            style={{
-                              overflow: "hidden",
-                              borderRadius: 15,
-                              flex: 3,
-                              paddingHorizontal: 4,
-                            }}
-                          >
-                            <Image
-                              source={item.image}
-                              style={{
-                                width: 140,
-                                height: 200,
-                                resizeMode: "cover",
-                                overflow: "hidden",
-                                marginTop: -15,
-                              }}
-                            />
-                          </View>
-                          <View
-                            style={{
-                              flexDirection: "row",
-                              justifyContent: "space-between",
-                              flex: 1,
-                              width: "100%",
-                            }}
-                          >
-                            <Text
-                              style={{
-                                fontWeight: Fonts.fontWeight.medium,
-                                marginLeft: 5,
-                                marginTop: 10,
-                              }}
-                            >
-                              {item.name}
-                            </Text>
-                            <View
-                              style={{
-                                width: 25,
-                                height: 25,
-                                backgroundColor: "#f77776",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                borderRadius: 20,
-                                marginRight: 15,
-                                marginTop: -10,
-                              }}
-                            >
-                              <Icon
-                                name="ios-heart"
-                                size={15}
-                                color={Colors.white}
-                              />
-                            </View>
-                          </View>
-                        </View>
-                      </TouchableWithoutFeedback>
-                    )}
-                    keyExtractor={(item) => item.id}
+                    renderItem={this.renderPopularSiteItem}
+                    keyExtractor={(item) => item.name}
                   />
                 </View>
               </View>

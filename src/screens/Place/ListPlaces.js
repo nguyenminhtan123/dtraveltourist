@@ -20,18 +20,23 @@ export class ListPlaces extends Component {
     super(props);
     this.state = {};
   }
-  pushPlaceDetail = () => {
+  pushPlaceDetail = (item) => {
+    console.log("item", item);
+
     NavigationUtils.push({
       screen: "PlaceDetail",
       isBack: true,
       isTopBarEnable: true,
       noBorder: true,
       leftButtonsColor: Colors.white,
+      passProps: {
+        siteId: item.id,
+      },
     });
   };
   renderItem = ({ item }) => {
     return (
-      <TouchableWithoutFeedback onPress={this.pushPlaceDetail}>
+      <TouchableWithoutFeedback onPress={() => this.pushPlaceDetail(item)}>
         <View
           style={{
             width: "100%",

@@ -18,6 +18,7 @@ import { Fonts, Colors } from "../../themes";
 import { ShadowInput } from "../../components";
 import RegisterActions from "../../redux/AuthRedux/actions";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import DeviceInfo from "react-native-device-info";
 
 class Register extends Component {
   register = () => {
@@ -27,6 +28,7 @@ class Register extends Component {
       password: "123456789",
       confirm_password: "123456789",
       phone_number: "0976756578",
+      deviceToken: DeviceInfo.getUniqueId(),
       accountable_type: 1,
     };
     this.props.register(data);

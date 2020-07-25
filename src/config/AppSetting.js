@@ -11,8 +11,9 @@ const APP_CONFIG = {
 
 const transformerConfig = {
   whitelistPerReducer: {
-    login: ["data", "token"],
+    login: ["data", "token", "user"],
     check: ["CheckListData"],
+    tour: ["data"],
   },
   blacklistPerReducer: {},
 };

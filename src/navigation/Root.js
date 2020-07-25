@@ -80,13 +80,13 @@ const mainTab = (screenName, title = "New Orders") => {
           },
           {
             component: {
-              name: "History",
+              name: "ProcessTour",
               passProps: {
                 text: "This is tab 2",
               },
               options: {
                 bottomTab: {
-                  text: "History",
+                  text: "ProcessTour",
                   icon: iconsMap["history"],
                   testID: "SECOND_TAB_BAR_BUTTON",
                   selectedIconColor: Colors.primary,

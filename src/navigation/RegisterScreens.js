@@ -16,6 +16,7 @@ import ListPlaces from "../screens/Place/ListPlaces";
 import PlaceDetail from "../screens/Place/PlaceDetail";
 import maps from "../screens/maps";
 import Cart from "../screens/Cart";
+import ProcessTour from "../screens/Cart/ProcessTour";
 
 // import Loading from "../screens/Utils/Loading";
 // import InAppNotification from "../screens/Utils/InAppNotification";
@@ -33,6 +34,7 @@ const SCREENS_WITH_REDUX = {
   PlaceDetail,
   maps,
   Cart,
+  ProcessTour,
 };
 // const SCREENS = {
 //   Loading,

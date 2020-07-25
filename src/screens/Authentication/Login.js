@@ -20,6 +20,28 @@ import Icons from "react-native-vector-icons/FontAwesome";
 import ShadowInput from "../../components/TextInput/ShadowInput";
 import { NavigationUtils } from "../../navigation";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import Svg, {
+  Circle,
+  Ellipse,
+  G,
+  TSpan,
+  TextPath,
+  Path,
+  Polygon,
+  Polyline,
+  Line,
+  Rect,
+  Use,
+  Symbol,
+  Defs,
+  LinearGradient,
+  RadialGradient,
+  Stop,
+  ClipPath,
+  Pattern,
+  Mask,
+} from "react-native-svg";
+import DeviceInfo from "react-native-device-info";
 
 export class Login extends Component {
   emailRef = null;
@@ -43,9 +65,11 @@ export class Login extends Component {
   };
 
   login = () => {
+    console.log("deviceToken", DeviceInfo.getUniqueId());
     const data = {
-      email: "tantann@gmail.com",
-      password: "123456789",
+      email: "tan1@gmail.com",
+      password: "123456",
+      device_token: DeviceInfo.getUniqueId(),
     };
     this.props.login(data);
   };

@@ -8,7 +8,11 @@ export const AuthTypes = makeConstantCreator(
 
   "REGISTER",
   "REGISTER_SUCCESS",
-  "REGISTER_FAIL"
+  "REGISTER_FAIL",
+
+  "GET_USER_SUCCESS",
+  "GET_USER_DETAIL",
+  "GET_USER_DETAIL_SUCCESS"
 );
 
 const login = (data) => makeActionCreator(AuthTypes.LOGIN, { data });
@@ -23,6 +27,17 @@ const registerSuccess = (response) =>
   makeActionCreator(AuthTypes.REGISTER_SUCCESS, { response });
 const registerFail = (error) =>
   makeActionCreator(AuthTypes.REGISTER_FAIL, { error });
+
+// const getUser = () => makeActionCreator(AuthTypes.GET_USER);
+const getUserSuccess = (response) =>
+  makeActionCreator(AuthTypes.GET_USER_SUCCESS, { response });
+// const getUserFail = (error) =>
+// makeActionCreator(AuthTypes.GET_USER_FAIL, { error });
+const getUserDetail = (id) =>
+  makeActionCreator(AuthTypes.GET_USER_DETAIL, { id });
+const getUserDetailSuccess = (response) =>
+  makeActionCreator(AuthTypes.GET_USER_DETAIL_SUCCESS, { response });
+
 export default {
   login,
   loginSuccess,
@@ -32,4 +47,8 @@ export default {
   register,
   registerSuccess,
   registerFail,
+
+  // getUser,
+  getUserSuccess,
+  // getUserFail,
 };
