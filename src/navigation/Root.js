@@ -97,7 +97,7 @@ const mainTab = (screenName, title = "New Orders") => {
           },
           {
             component: {
-              name: "Notification",
+              name: "maps",
               passProps: {
                 text: "This is tab 2",
               },

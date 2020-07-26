@@ -28,7 +28,7 @@ class Register extends Component {
       password: "123456789",
       confirm_password: "123456789",
       phone_number: "0976756578",
-      deviceToken: DeviceInfo.getUniqueId(),
+      device_token: DeviceInfo.getUniqueId(),
       accountable_type: 1,
     };
     this.props.register(data);

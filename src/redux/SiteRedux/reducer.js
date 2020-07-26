@@ -42,7 +42,7 @@ const getSiteByIdSuccess = (state, { response }) =>
 const getSiteByIdFailure = (state, { error }) =>
   state.merge({
     error: error,
-    getAllSiteLoading: false,
+    getSiteByIdLoading: false,
   });
 
 const ACTION_HANDLERS = {

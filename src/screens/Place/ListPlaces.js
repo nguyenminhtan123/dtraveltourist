@@ -21,8 +21,6 @@ export class ListPlaces extends Component {
     this.state = {};
   }
   pushPlaceDetail = (item) => {
-    console.log("item", item);
-
     NavigationUtils.push({
       screen: "PlaceDetail",
       isBack: true,
@@ -137,7 +135,7 @@ export class ListPlaces extends Component {
             }}
             data={this.props.categorySites}
             renderItem={this.renderItem}
-            keyExtractor={(item) => item.id}
+            keyExtractor={(item) => item.name}
           />
         </View>
       </View>

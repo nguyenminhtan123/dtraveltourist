@@ -50,9 +50,9 @@ const registerFail = (state, { error }) =>
     registerLoading: false,
   });
 
-const getUserSuccess = (state, { response }) =>
+const getUserDetailSuccess = (state, { response }) =>
   state.merge({
-    user: response,
+    user: response.data,
   });
 
 const ACTION_HANDLERS = {
@@ -65,7 +65,7 @@ const ACTION_HANDLERS = {
   [AuthTypes.REGISTER_SUCCESS]: registerSuccess,
   [AuthTypes.REGISTER_FAIL]: registerFail,
 
-  [AuthTypes.GET_USER_SUCCESS]: getUserSuccess,
+  [AuthTypes.GET_USER_DETAIL_SUCCESS]: getUserDetailSuccess,
 };
 
 export default makeReducerCreator(INITIAL_STATE, ACTION_HANDLERS);

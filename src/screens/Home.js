@@ -93,8 +93,10 @@ class Home extends Component {
     NavigationUtils.push({
       screen: "Cart",
       isBack: true,
+      title: "Tour",
       isTopBarEnable: true,
       noBorder: true,
+      isDrawBehind: true,
       leftButtonsColor: Colors.black,
     });
   };
@@ -236,6 +238,8 @@ class Home extends Component {
         image: require("../assets/img/site3.jpg"),
       },
     ];
+    console.log("voooo", DATA);
+
     return (
       <Container loading={getAllSiteLoading}>
         <View style={{ flex: 1 }}>
@@ -288,75 +292,73 @@ class Home extends Component {
           </View>
 
           <View style={{ marginLeft: 15, marginTop: 10 }}>
-            <ScrollView showsVerticalScrollIndicator={false}>
-              <View>
+            <View>
+              <Text
+                style={{
+                  fontSize: Fonts.fontSize.xMedium,
+                  fontWeight: Fonts.fontWeight.bold,
+                }}
+              >
+                CHOOSE BY CATEGORIES
+              </Text>
+              <View style={{ marginTop: 15 }}>
+                <FlatList
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  data={DATA}
+                  renderItem={this.renderCategoryItem}
+                  keyExtractor={(item) => item.category}
+                />
+              </View>
+            </View>
+            <View style={{ marginTop: 30 }}>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
                 <Text
                   style={{
                     fontSize: Fonts.fontSize.xMedium,
                     fontWeight: Fonts.fontWeight.bold,
                   }}
                 >
-                  CHOOSE BY CATEGORIES
+                  MOST POPULAR
                 </Text>
-                <View style={{ marginTop: 15 }}>
-                  <FlatList
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    data={DATA}
-                    renderItem={this.renderCategoryItem}
-                    keyExtractor={(item) => item.name}
-                  />
-                </View>
+                <TouchableWithoutFeedback onPress={this.pushListSites}>
+                  <View style={{ marginRight: 10 }}>
+                    <Text
+                      style={{
+                        fontSize: Fonts.fontSize.xMedium,
+                        fontWeight: Fonts.fontWeight.bold,
+                        color: Colors.primary,
+                      }}
+                    >
+                      See more
+                    </Text>
+                  </View>
+                </TouchableWithoutFeedback>
               </View>
-              <View style={{ marginTop: 30 }}>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
+              <View
+                style={{
+                  height: 260,
+                  marginBottom: 20,
+                  paddingBottom: 15,
+                }}
+              >
+                <FlatList
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={{
+                    paddingVertical: 15,
                   }}
-                >
-                  <Text
-                    style={{
-                      fontSize: Fonts.fontSize.xMedium,
-                      fontWeight: Fonts.fontWeight.bold,
-                    }}
-                  >
-                    MOST POPULAR
-                  </Text>
-                  <TouchableWithoutFeedback onPress={this.pushListSites}>
-                    <View style={{ marginRight: 10 }}>
-                      <Text
-                        style={{
-                          fontSize: Fonts.fontSize.xMedium,
-                          fontWeight: Fonts.fontWeight.bold,
-                          color: Colors.primary,
-                        }}
-                      >
-                        See more
-                      </Text>
-                    </View>
-                  </TouchableWithoutFeedback>
-                </View>
-                <View
-                  style={{
-                    height: 260,
-                    marginBottom: 20,
-                    paddingBottom: 15,
-                  }}
-                >
-                  <FlatList
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    contentContainerStyle={{
-                      paddingVertical: 15,
-                    }}
-                    data={SITE}
-                    renderItem={this.renderPopularSiteItem}
-                    keyExtractor={(item) => item.name}
-                  />
-                </View>
+                  data={SITE}
+                  renderItem={this.renderPopularSiteItem}
+                  keyExtractor={(item) => item.name}
+                />
               </View>
-            </ScrollView>
+            </View>
           </View>
 
           <TouchableWithoutFeedback onPress={this.pushCart}>

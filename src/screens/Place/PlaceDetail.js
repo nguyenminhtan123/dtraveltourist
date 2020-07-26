@@ -14,6 +14,7 @@ import SiteActions from "../../redux/SiteRedux/actions";
 import { Container } from "../../components";
 import TourActions from "../../redux/BookTourRedux/actions";
 import _ from "lodash";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 export class PlaceDetail extends Component {
   constructor(props) {
@@ -45,9 +46,9 @@ export class PlaceDetail extends Component {
 
   componentDidMount() {
     const { tour, user } = this.props;
-    if (_.has(this.props.tour, "id")) {
+    if (_.has(this.props.tour, "id") === true) {
       let data = {
-        tourist_id: user.accountable_id,
+        tourist_id: user.id,
         tour_guide_id: null,
         promotion_code: null,
         tourist_site_id: null,
@@ -57,10 +58,19 @@ export class PlaceDetail extends Component {
         total_guests: 3,
         status: 0,
       };
-      console.log(_.has(this.props.tour, "id"));
       this.props.createCart(data);
     }
   }
+
+  onAddSiteToTour = () => {
+    const { tour, site, addSiteToTour } = this.props;
+    let data = {
+      tour_booking_id: tour.id,
+      tourist_site_id: site.id,
+    };
+    console.log("data", data);
+    addSiteToTour(data);
+  };
 
   static options = () => ({
     topBar: {
@@ -123,17 +133,22 @@ export class PlaceDetail extends Component {
               ],
             }}
           >
-            <View style={styles.buttonAddCartContainer}>
+            <TouchableWithoutFeedback
+              onPress={this.onAddSiteToTour}
+              style={styles.buttonAddCartContainer}
+            >
+              {/* <View> */}
               <Text
                 style={{
                   color: Colors.white,
                   fontSize: Fonts.fontSize.xMedium,
                 }}
               >
-                Add To Cart
+                Add To Tour
               </Text>
               <View style={styles.whiteLine} />
-            </View>
+              {/* </View> */}
+            </TouchableWithoutFeedback>
           </Animated.View>
 
           <View style={{ flex: 3, paddingLeft: 35 }}>
@@ -189,6 +204,7 @@ const mapStateToProps = (state, props) => ({
 const mapDispatchToProps = (dispatch) => ({
   getSiteById: (id) => dispatch(SiteActions.getSiteById(id)),
   createCart: (data) => dispatch(TourActions.updateTour(data)),
+  addSiteToTour: (data) => dispatch(TourActions.addSiteToTour(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlaceDetail);

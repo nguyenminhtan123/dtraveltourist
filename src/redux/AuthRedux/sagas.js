@@ -1,5 +1,10 @@
 import { put, call, takeLatest } from "redux-saga/effects";
-import { adminLoginApi, registerApi, getUserApi } from "../../api/auth";
+import {
+  adminLoginApi,
+  registerApi,
+  getUserApi,
+  getUserDetailApi,
+} from "../../api/auth";
 import AuthActions, { AuthTypes } from "./actions";
 import SiteActions from "../SiteRedux/actions";
 import AsyncStorage from "@react-native-community/async-storage";
@@ -21,7 +26,11 @@ export function* adminLoginSaga({ data }) {
     global.data = {};
     yield put(AppActions.startup());
     const getUserResponse = yield call(getUserApi);
-    yield put(AuthActions.getUserSuccess(getUserResponse));
+    const getUserDetailResponse = yield call(
+      getUserDetailApi,
+      getUserResponse.accountable_id
+    );
+    yield put(AuthActions.getUserDetailSuccess(getUserDetailResponse));
   } catch (error) {
     yield put(AuthActions.loginFailure(error));
     // if (error.code === 403 || error.code === 409) {

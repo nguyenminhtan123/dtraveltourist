@@ -363,7 +363,9 @@ PODS:
     - React
   - RNCCheckbox (0.4.1):
     - React
-  - RNDeviceInfo (5.6.1):
+  - RNDateTimePicker (2.6.0):
+    - React
+  - RNDeviceInfo (5.6.3):
     - React
   - RNGestureHandler (1.6.1):
     - React
@@ -449,6 +451,7 @@ DEPENDENCIES:
   - ReactNativeNavigation (from `../node_modules/react-native-navigation`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNCCheckbox (from `../node_modules/@react-native-community/checkbox`)"
+  - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
@@ -568,6 +571,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/async-storage"
   RNCCheckbox:
     :path: "../node_modules/@react-native-community/checkbox"
+  RNDateTimePicker:
+    :path: "../node_modules/@react-native-community/datetimepicker"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNGestureHandler:
@@ -642,7 +647,8 @@ SPEC CHECKSUMS:
   ReactNativeNavigation: 34b7ba2fa6691876f5c86eb773b51dcbefb8051c
   RNCAsyncStorage: d059c3ee71738c39834a627476322a5a8cd5bf36
   RNCCheckbox: 8fcf7c761e9d7c9fb44b56d1b7da848ec3de5873
-  RNDeviceInfo: b6e650fbd234732c759544218657d549b4339038
+  RNDateTimePicker: e386ff4ef3300964ed0cad97ce6f206e0effbfdb
+  RNDeviceInfo: 5be12a5bfbb8da3528c43ee4373abd9c30d04616
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNPermissions: ad71dd4f767ec254f2cd57592fbee02afee75467
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e

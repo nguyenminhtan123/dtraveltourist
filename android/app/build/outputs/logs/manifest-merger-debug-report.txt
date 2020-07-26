@@ -11,6 +11,7 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.33.1] /Users/tan/.grad
 MERGED from [androidx.multidex:multidex:2.0.0] /Users/tan/.gradle/caches/transforms-2/files-2.1/9bc1914760171f9bcb5686e4b9556e54/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [:react-native-community_async-storage] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_checkbox] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/checkbox/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_datetimepicker] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
 MERGED from [:react-native-community_geolocation] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-android-location-enabler] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-android-location-enabler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-config] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-config/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -240,6 +241,8 @@ application
 ADDED from /Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:39:5-62:19
 MERGED from /Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:39:5-62:19
 MERGED from /Users/tan/Desktop/tan-github/dtraveltourist/android/app/src/main/AndroidManifest.xml:39:5-62:19
+MERGED from [:react-native-community_datetimepicker] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-20
+MERGED from [:react-native-community_datetimepicker] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-20
 MERGED from [:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-22:19
 MERGED from [:react-native-device-info] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-device-info/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-22:19
 MERGED from [:react-native-navigation] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-navigation/lib/android/app/build/intermediates/library_manifest/reactNative62Debug/AndroidManifest.xml:11:5-15:19
@@ -366,6 +369,8 @@ MERGED from [:react-native-community_async-storage] /Users/tan/Desktop/tan-githu
 MERGED from [:react-native-community_async-storage] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_checkbox] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/checkbox/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_checkbox] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/checkbox/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_datetimepicker] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-community_datetimepicker] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/datetimepicker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-community_geolocation] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_geolocation] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-android-location-enabler] /Users/tan/Desktop/tan-github/dtraveltourist/node_modules/react-native-android-location-enabler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
